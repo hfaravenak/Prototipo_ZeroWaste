@@ -7,7 +7,7 @@ Se debe ejecutar el archivo image_server.py (con python image_server.py) y el fr
 El archivo con la red neuronal entrenada corresponde a modelo_comida.keras.
 
 # Librerías 
-Algunas de las librerías a tener instaladas son:
+Las librerías a tener instaladas son:
 - TensorFlow
 - Keras
 - Flask
@@ -18,4 +18,5 @@ Algunas de las librerías a tener instaladas son:
 # Frontend
 - Se utilizaron React y vite
 - Probar si el frontend levanta solamente con la clonación del repositorio, sino hacer lo siguiente:
-- En una cmd dentro de la carpeta frontend ejecutar el comando "npm install" y luego "npm run dev" con esto debería levantar. 
+- En una cmd dentro de la carpeta frontend ejecutar el comando "npm install" y luego "npm run dev" con esto debería levantar.
+- Si no se tiene instalado npm, instalar node.js desde aquí https://nodejs.org/en/download presionando el botón verde Windows installer.msi
