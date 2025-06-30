@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import logoZeroWaste from '../assets/logo_zero_waste.png'
 
 const Image = () => {
   const [imagen, setImagen] = useState(null)
@@ -75,49 +76,114 @@ const Image = () => {
   }, [])
 
   return (
-    <div style={{ textAlign: 'center', padding: '20px' }}>
-      <h2>📷 Última Imagen Capturada</h2>
+  <div style={styles.container}>
+    <div style={styles.contentWrapper}>
+      <img src={logoZeroWaste} alt="Zero Waste" style={styles.logo} />
+      <h2 style={styles.title}>📷 Última Imagen Capturada</h2>
 
-      <button onClick={capturarFoto} disabled={loading}>
+      <button onClick={capturarFoto} disabled={loading} style={styles.button}>
         {loading ? 'Tomando muestra...' : 'Tomar muestra'}
       </button>
 
-      <div style={{ marginTop: '20px' }}>
+      <div style={styles.imageContainer}>
         {imagen ? (
           <>
-            <img src={imagen} alt="Última imagen tomada" style={{ maxWidth: '600px' }} />
-
+            <img src={imagen} alt="Última imagen tomada" style={styles.image} />
             {volumen !== null && (
               volumen > 0 ? (
                 <>
-                  <p style={{ fontSize: '18px', marginTop: '10px' }}>
-                    Volumen: <strong>{volumen} Unidades volumétricas</strong>
+                  <p style={styles.info}>
+                    Volumen: <strong>{volumen} cm³</strong>
                   </p>
                   {tipoComida && (
-                    <p style={{ fontSize: '18px', marginTop: '5px' }}>
+                    <p style={styles.info}>
                       Plato de comida: <strong>{tipoComida}</strong>
                     </p>
                   )}
                 </>
               ) : (
-                <p style={{ fontSize: '18px', marginTop: '10px', color: 'orange' }}>
-                  ⚠️ No se detecta comida en el plato.
-                </p>
+                <p style={styles.warning}>⚠️ No se detecta comida en el plato.</p>
               )
             )}
           </>
         ) : (
-          <p>No se han encontrado imágenes aún.</p>
+          <p style={styles.info}>No se han encontrado imágenes aún.</p>
         )}
       </div>
 
       <div style={{ marginTop: '20px' }}>
         <Link to="/">
-          <button>🏠 Volver al Home</button>
+          <button style={styles.backButton}>🏠 Volver al Home</button>
         </Link>
       </div>
     </div>
+  </div>
   )
+}
+
+const styles = {
+  contentWrapper: {
+  maxWidth: '600px',
+  width: '100%',
+  },
+  container: {
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  flexDirection: 'column',
+  minHeight: '100vh',
+  width: '100vw',
+  backgroundColor: '#f9fbfd',
+  padding: '30px',
+  boxSizing: 'border-box',
+  textAlign: 'center',
+  },
+  logo: {
+    width: '120px',
+    marginBottom: '10px',
+  },
+  title: {
+    fontSize: '28px',
+    color: '#34495e',
+    marginBottom: '20px',
+  },
+  button: {
+    padding: '10px 20px',
+    backgroundColor: '#2980b9',
+    color: 'white',
+    fontSize: '16px',
+    border: 'none',
+    borderRadius: '6px',
+    cursor: 'pointer',
+  },
+  backButton: {
+    marginTop: '20px',
+    padding: '8px 18px',
+    backgroundColor: '#27ae60',
+    color: 'white',
+    fontSize: '14px',
+    border: 'none',
+    borderRadius: '6px',
+    cursor: 'pointer',
+  },
+  imageContainer: {
+    marginTop: '30px',
+  },
+  image: {
+    maxWidth: '90%',
+    borderRadius: '10px',
+    boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
+  },
+  info: {
+    fontSize: '18px',
+    marginTop: '10px',
+    color: '#2c3e50',
+  },
+  warning: {
+    fontSize: '18px',
+    marginTop: '10px',
+    color: '#e67e22',
+  },
 }
 
 export default Image
