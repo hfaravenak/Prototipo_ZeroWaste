@@ -36,7 +36,9 @@
 }
 
 .footer-logo {
-  height: 120px;
-  width: auto;
-  margin-left: 2rem;
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #fff;
 }

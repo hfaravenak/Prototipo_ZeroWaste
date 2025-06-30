@@ -78,7 +78,7 @@ const Image = () => {
   return (
   <div style={styles.container}>
     <div style={styles.contentWrapper}>
-      <img src={logoZeroWaste} alt="Zero Waste" style={styles.logo} />
+      
       <h2 style={styles.title}>📷 Última Imagen Capturada</h2>
 
       <button onClick={capturarFoto} disabled={loading} style={styles.button}>
@@ -93,7 +93,7 @@ const Image = () => {
               volumen > 0 ? (
                 <>
                   <p style={styles.info}>
-                    Volumen: <strong>{volumen} cm³</strong>
+                    Volumen: <strong>{volumen} Unidades Volumétricas</strong>
                   </p>
                   {tipoComida && (
                     <p style={styles.info}>

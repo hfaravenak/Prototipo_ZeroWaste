@@ -4,7 +4,7 @@ from pathlib import Path
 from datetime import datetime
 
 # Carpeta personalizada donde se guardarán las imágenes
-FOTOS_PATH = Path(r'C:\Users\Pipe\Desktop\Prototipo\images')
+FOTOS_PATH = Path(r'C:\Users\valde\OneDrive\Desktop\Prototipo_ZeroWaste\images')
 FOTOS_PATH.mkdir(parents=True, exist_ok=True)
 
 # Índice de la webcam es 0 en mi caso ya que la webcam esta conectada por usb. 

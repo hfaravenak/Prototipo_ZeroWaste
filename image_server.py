@@ -12,8 +12,11 @@ app = Flask(__name__)
 CORS(app)
 
 # Rutas
-IMAGES_FOLDER = r'C:\Users\Pipe\Desktop\Prototipo\images'
-MODEL_PATH = r'C:\Users\Pipe\Desktop\Prototipo\modelo_comida.keras'
+""" Rutas pipe
+IMAGES_FOLDER = r'C:\Users\Pipe\Desktop\Clases Online\1 semestre 2025\PIINFO\Prototipo_ZeroWaste\images'
+MODEL_PATH = r'C:\Users\Pipe\Desktop\Clases Online\1 semestre 2025\PIINFO\Prototipo_ZeroWaste\modelo_comida.keras' """
+IMAGES_FOLDER = r'C:\Users\valde\OneDrive\Desktop\Prototipo_ZeroWaste\images'
+MODEL_PATH = r'C:\Users\valde\OneDrive\Desktop\Prototipo_ZeroWaste\modelo_comida.keras'
 
 # Crear carpeta si no existe
 if not os.path.exists(IMAGES_FOLDER):
@@ -87,8 +90,8 @@ def estimar_volumen(imagen):
     area_pixeles = sum([cv2.contourArea(c) for c in contornos]) if contornos else 0
     print(f"[DEBUG] Área total detectada: {area_pixeles:.2f} px²")
 
-    if area_pixeles < 93576.00:
-        return 0
+    if area_pixeles < 75000.00:
+        return 0 
 
     diametro_plato_cm = 27
     radio_cm = diametro_plato_cm / 2

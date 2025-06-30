@@ -14,9 +14,19 @@
   gap: 1.2rem;
 }
 
+.navbar-title {
+  font-size: 2.5rem;
+  margin: 0;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
 .navbar-logo {
-  height: 120px; /* AUMENTA el tamaño del logo */
-  width: auto;
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #fff;
 }
 
 .nav-links {
@@ -31,7 +41,8 @@
   color: white;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 .nav-links a:hover {

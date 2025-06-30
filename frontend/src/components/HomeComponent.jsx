@@ -6,11 +6,7 @@ const Home = () => {
   return (
     <div style={styles.pageWrapper}>
       <div style={styles.card}>
-        <img
-          src={logoZeroWaste}
-          alt="Logo Zero Waste"
-          style={styles.logoPrincipal}
-        />
+        
         <h2 style={styles.title}>Zero Waste - Prototipo</h2>
         <p style={styles.subtitle}>
           Bienvenido a la simulación local del proyecto Zero Waste.
