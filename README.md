@@ -8,12 +8,15 @@ El archivo con la red neuronal entrenada corresponde a modelo_comida.keras.
 
 # Librerías 
 Las librerías a tener instaladas son:
-- TensorFlow
-- Keras
-- Flask
-- Flask_cors
-- Open CV2
-- Numpy
+- TensorFlow V2.17.0
+- Keras V3.6.0
+- Flask V3.1.1
+- Flask_cors V6.0.1
+- Open CV2 V4.10.0
+- Numpy V1.26.4
+- Pillow* V9.5.0
+
+* La librería Pillow si bien no aparece en el código, debe ser instalada para el paso de información del backend al frontend, se instala con el comando "pip install Pillow"
 
 # Frontend
 - Se utilizaron React y vite
